@@ -12,10 +12,15 @@ const schema = require('./schema/schema');
 const app = express();
 
 // Replace with your mongoLab URI
-const MONGO_URI = 'mongodb://zuber:passward@123@ds147884.mlab.com:47884/auth-sg';
+
+mongoose.Promise = global.Promise;
+
+const MONGO_URI = 'mongodb://zuber:password@ds147884.mlab.com:47884/auth-sg';
+
+
+// Replace with your mongoLab URI
 
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
-mongoose.Promise = global.Promise;
 
 // Connect to the mongoDB instance and log a message
 // on success or failure
