@@ -6,7 +6,7 @@ import mutation from '../mutations/Logout';
 
 class Header extends Component {
   onLogoutClick() {
-
+    this.props.mutate({});
   }
 
   renderButtons() {
